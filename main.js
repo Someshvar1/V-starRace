@@ -5,13 +5,13 @@ WDcar1_width = 120;
 WDcar1_height = 70;
 WDcar1_image = "White Dragon Car1.png";
 WDcar1_x = 10;
-WDcar1_y = 10;
+WDcar1_y = 300;
 
 GMcar2_width = 120;
 GMcar2_height = 70;
 GMcar2_image = "Green Machine Car2.png";
 GMcar2_x = 10;
-GMcar2_y = 100;
+GMcar2_y = 400;
 
 background_image = "racing.jpg";
 
@@ -78,7 +78,20 @@ function my_keydown(e) {
         car2_right();
         console.log("D key - right");
     }
+    if(WDcar1_x>700){
+        status="Lambhorgini is the winner";
+        console.log(status);
+        document.getElementById("game_status").innerHTML=status;
+    }
+    if(GMcar2_x>700){
+        status="Bugatti chiron is the winner";
+        console.log(status);
+        document.getElementById("game_status").innerHTML=status;
+    }
+    
 }
+
+
 
 function car1_up() {
     if (WDcar1_y >= 0) {
